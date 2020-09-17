@@ -1,19 +1,83 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Form Validation</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
+    <title>Welcome to Adi Travels</title>
+</head>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<body>
+    <div id="success" class="alert alert-success alert-dismissible fade" role="alert">
+        <strong>Success!</strong> Your travel request has been successfully submitted.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div id="failure" class="alert alert-danger alert-dismissible fade" role="alert">
+        <strong>Error!</strong> Your travel request has not been sent due to error.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="container">
+        <h1>Adi Travel Desk</h1>
+        <hr>
+        <form>
+            <div class="form-group">
+                <label for="name">Username</label>
+                <input type="text" class="form-control" id="name" placeholder="enter your username">
+                <small id="namevalid" class="form-text text-muted invalid-feedback">Your username must 2-10 characters long and should not start with a number</small>
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="text" class="form-control" id="email" placeholder="name@example.com">
+                <small id="emailvalid" class="form-text text-muted invalid-feedback">Your email must must be a valid email</small>
+                
+            </div>
+            <div class="form-group">
+                <label for="car">Select your car</label>
+                <select class="form-control" id="car">
+                    <option>Fortuner</option>
+                    <option>Corolla Grande</option>
+                    <option>Civic Turbo</option>
+                    <option>Revo</option>
+                    <option>Land Cruiser V8</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="address">Enter your address</label>
+                <textarea class="form-control" name="address" id="address" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="phone">Enter Your Phone Number</label>
+                <input type="text" class="form-control" id="phone" placeholder="number">
+                <small id="phonevalid" class="form-text text-muted invalid-feedback">your number must must be 10 digit long</small>
+                
+            </div>
+            <div class="form-group">
+                <label for="other">Any other message...</label>
+                <textarea class="form-control" id="other" rows="3"></textarea>
+            </div>
+            <button id="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     <script src="js/app.js"></script>
-  </body>
+</body>
+
 </html>
